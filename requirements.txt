@@ -19,7 +19,7 @@ convertdate==2.3.2
 cryptocmd==0.6.0
 cufflinks==0.17.3
 cycler==0.10.0
-Cython @ file:///D:/bld/cython_1623963518510/work
+Cython 
 debugpy==1.3.0
 decorator==5.0.9
 defusedxml==0.7.1
@@ -42,12 +42,12 @@ jupyter-client==6.1.12
 jupyter-core==4.7.1
 jupyterlab-pygments==0.1.2
 jupyterlab-widgets==1.0.0
-kiwisolver @ file:///D:/bld/kiwisolver_1610099948875/work
+kiwisolver 
 korean-lunar-calendar==0.2.1
 LunarCalendar==0.0.9
 lxml==4.6.3
 MarkupSafe==2.0.1
-matplotlib @ file:///D:/bld/matplotlib-suite_1620506206452/work
+matplotlib 
 matplotlib-inline==0.1.2
 mistune==0.8.4
 multitasking==0.0.9
@@ -56,15 +56,15 @@ nbconvert==6.1.0
 nbformat==5.1.3
 nest-asyncio==1.5.1
 notebook==6.4.0
-numpy @ file:///D:/bld/numpy_1624400025471/work
+numpy 
 oauthlib==3.1.1
-olefile @ file:///home/conda/feedstock_root/build_artifacts/olefile_1602866521163/work
+olefile 
 packaging==21.0
-pandas @ file:///D:/bld/pandas_1625236589640/work
+pandas 
 pandocfilters==1.4.3
 parso==0.8.2
 pickleshare==0.7.5
-Pillow @ file:///D:/bld/pillow_1625678130042/work
+Pillow 
 plotly==5.1.0
 prometheus-client==0.11.0
 prompt-toolkit==3.0.19
@@ -85,17 +85,17 @@ pyrsistent==0.18.0
 PySocks==1.7.1
 pystan==2.19.1.1
 python-dateutil==2.8.1
-pytz @ file:///home/conda/feedstock_root/build_artifacts/pytz_1612179539967/work
+pytz 
 pywin32==301
 pywinpty==1.1.3
 pyzmq==22.1.0
 redis==3.5.3
 requests==2.25.1
 requests-oauthlib==1.3.0
-scipy @ file:///C:/bld/scipy_1624825036206/work
+scipy 
 Send2Trash==1.7.1
 setuptools-git==1.2
-six @ file:///home/conda/feedstock_root/build_artifacts/six_1620240208055/work
+six 
 smmap==4.0.0
 streamlit==0.84.0
 tablib==3.0.0
@@ -104,7 +104,7 @@ terminado==0.10.1
 testpath==0.5.0
 toml==0.10.2
 toolz==0.11.1
-tornado @ file:///D:/bld/tornado_1610094858390/work
+tornado
 tqdm==4.61.2
 traitlets==5.0.5
 tweepy==3.10.0
