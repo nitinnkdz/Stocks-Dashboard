@@ -12,8 +12,8 @@ import yfinance as yf
 import cufflinks as cf
 from cryptocmd import CmcScraper
 import json
-from PIL import Image
-from datetime import datetime, timedelta
+import datetime
+from datetime import  timedelta
 
 auth = tweepy.OAuthHandler(config.TWITTER_CONSUMER_KEY, config.TWITTER_CONSUME_SECRET)
 auth.set_access_token(config.TWITTER_ACCESS_TOKEN,config.TWITTER_ACCESS_TOKEN_SECRET)
@@ -26,14 +26,13 @@ st.header(Dashboard)
 
 
 if Dashboard == 'Information':
-    # Retrieving tickers data
     
     ticker_list = pd.read_csv('https://raw.githubusercontent.com/nitinnkdz/s-and-p-500-companies/master/data/constituents_symbols.txt',error_bad_lines=False)
     tickerSymbol = st.sidebar.selectbox('Stock ticker', ticker_list)
     tickerData = yf.Ticker(tickerSymbol) # 
     tickerDf = tickerData.history(period="max")  
 
-    # Ticker information
+
     string_logo = '<img src=%s>' % tickerData.info['logo_url']
     st.markdown(string_logo, unsafe_allow_html=True)
 
@@ -540,6 +539,8 @@ if Dashboard == 'ML-Forecast Stock Prices':
     st.subheader('Raw data')
     st.write(data.tail())
 
+
+    @st.cache
     def plot_raw_data():
         fig = go.Figure()
         fig.add_trace(go.Scatter(x=data['Date'], y=data['Open'], name="stock_open"))
@@ -624,14 +625,14 @@ if Dashboard == 'crypto Prediction':
     st.write(data.head())
 
 
-    ### Plot functions
+    @st.cache
     def plot_raw_data():
         fig = go.Figure()
         fig.add_trace(go.Scatter(x=data['Date'], y=data['Close'], name="Close"))
         fig.layout.update(title_text='Time Series data with Rangeslider', xaxis_rangeslider_visible=True)
         st.plotly_chart(fig)
 
-
+    @st.cache
     def plot_raw_data_log():
         fig = go.Figure()
         fig.add_trace(go.Scatter(x=data['Date'], y=data['Close'], name="Close"))
@@ -647,7 +648,7 @@ if Dashboard == 'crypto Prediction':
     else:
         plot_raw_data()
 
-    ### Predict forecast with Prophet
+
     if st.button("Predict"):
 
         df_train = data[['Date', 'Close']]
