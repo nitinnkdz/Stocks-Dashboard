@@ -540,7 +540,7 @@ if Dashboard == 'ML-Forecast Stock Prices':
     st.write(data.tail())
 
 
-    @st.cache(suppress_st_warning=suppress the warning)
+   
     def plot_raw_data():
         fig = go.Figure()
         fig.add_trace(go.Scatter(x=data['Date'], y=data['Open'], name="stock_open"))
