@@ -24,9 +24,6 @@ st.sidebar.write("DASHBOARD")
 Dashboard = st.sidebar.selectbox("Select the dashboard",('Signal','Information','Fundamentals','News','StockTwits','Twitter','Reddit','ML-Forecast Stock Prices','crypto Prediction','Patterns','TradingView' ))
 st.header(Dashboard)
 
-st.sidebar.write("Created By Nitin Kohli")
-st.sidebar.write("[LinkedIn](https://www.linkedin.com/in/nitin-kohli/)")
-
 
 if Dashboard == 'Information':
     # Retrieving tickers data
@@ -520,7 +517,7 @@ if Dashboard == 'TradingView':
    
 
 if Dashboard == 'ML-Forecast Stock Prices':
-    START = st.date_input('Start date')
+    START = st.date_input('Start Date',datetime.date(2011,1,1))
     END = st.date_input('End date')
     stockslist = pd.read_csv('https://raw.githubusercontent.com/nitinnkdz/s-and-p-500-companies/master/data/constituents_symbols.txt',error_bad_lines=False)
     selected_stock = st.selectbox('Select the stock for prediction', stockslist)
@@ -691,6 +688,8 @@ if Dashboard == 'crypto Prediction':
         fig2 = m.plot_components(forecast)
         st.write(fig2)
 
+st.sidebar.write("Created By Nitin Kohli")
+st.sidebar.write("[LinkedIn](https://www.linkedin.com/in/nitin-kohli/)")
 
 
 
